@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import LifecycleB from "./LifecycleB";
 
 class LifecycleA extends Component {
    constructor(props) {
@@ -15,29 +14,12 @@ class LifecycleA extends Component {
       console.log("LifecycleA getDerivedStateFromProps");
       return null;
    }
-   componentDidMount() {
-      console.log("LifecycleA componentDidMount");
-   }
-
-   shouldComponentUpdate() {
-      console.log("LifecycleA  shouldComponentUpdate");
-   }
-
-   getSnapshotBeforeUpdate(){
-    console.log("LifecycleA  getSnapshotBeforeUpdate");
-   }
-
-   componentDidUpdate(){
-    console.log("LifecycleA  componentDidUpdate");
+   componentDidMount(){
+    console.log("LifecycleA componentDidMount");
    }
    render() {
       console.log("LifecycleA render");
-      return (
-         <div>
-            <div>LifecycleA </div>
-            <LifecycleB />
-         </div>
-      );
+      return <div>LifecycleA </div>;
    }
 }
 
